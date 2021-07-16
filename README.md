@@ -6,6 +6,8 @@ This post shows how to use Electron as the GUI component of Python applications.
 
 ## important notice
 
+**Disclaimer on Dec 2019: This article was originally written in 2017, and I haven't updated or maintained this repo for a long time. Right now (Dec 2019), the code in this article may be outdated, and may or may not be working!!!**
+
 The following are copied from my [original post](https://www.fyears.org/2017/02/electron-as-gui-of-python-apps-updated.html). They should be the same. **If there are inconsistencies, the `README.md` on the GitHub repo is more accurate.**
 
 ## original post and debates
@@ -151,7 +153,7 @@ We need to configure the `package.json`, especially the `main` entry:
     "start": "electron ."
   },
   "dependencies": {
-    "zerorpc": "git+https://github.com/fyears/zerorpc-node.git"
+    "zerorpc": "git+https://github.com/0rpc/zerorpc-node.git"
   },
   "devDependencies": {
     "electron": "1.7.12",
@@ -194,7 +196,7 @@ npm install --verbose --runtime=electron --target=1.7.12
 ./node_modules/.bin/electron
 ```
 
-The `npm install` will install `zerorpc-node` from [my fork](https://github.com/0rpc/zerorpc-node/pull/84) to skip building from sources.
+~~The `npm install` will install `zerorpc-node` from [my fork](https://github.com/0rpc/zerorpc-node/pull/84) to skip building from sources.~~ Updated: the pull request of `zerorpc-node` was [merged](https://github.com/0rpc/zerorpc-node/pull/84) so everyone is encouraged to use the official repo instead.
 
 (Consider [adding `./.npmrc`](https://docs.npmjs.com/files/npmrc) in the project folder if necessary.)
 
